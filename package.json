@@ -1,0 +1,16 @@
+{
+  "name": "gld-rest-api",
+  "version": "1.0.0",
+  "description": "GLD REST API - Multifunctional REST API",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run install-all && npm run build && npm run start",
+    "install-all": "cd api && npm install && cd ../dashboard/frontend && npm install && cd ../..",
+    "build": "cd dashboard/frontend && npm run build && cd ../..",
+    "start": "node api/server.js",
+    "dev": "concurrently \"cd api && npm run dev\" \"cd dashboard/frontend && npm run dev\""
+  },
+  "keywords": ["api", "rest", "dashboard", "multifunctional"],
+  "author": "GLD Solutions",
+  "license": "MIT"
+}
